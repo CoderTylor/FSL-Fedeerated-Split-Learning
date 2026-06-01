@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fslt-socket"
+version = "0.1.0"
+description = "Clean socket prototype for federated split learning experiments."
+requires-python = ">=3.10"
+dependencies = [
+  "torch",
+  "torchvision",
+  "pandas",
+  "scikit-learn",
+  "pillow",
+  "numpy",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
